@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+</head>
+
+<body>
+    <a-scene background="color: #c7c6f7">
+
+        <!--Camera-->
+        <a-entity position="0 1 5">
+            <a-camera></a-camera>
+        </a-entity>
+
+        <!--Plane-->
+        <a-entity>
+            <a-plane 
+            position="0 -1 -2" 
+            rotation="-90 0 0" 
+            width="10" 
+            height="5" 
+            color="#8482c4"
+            ></a-plane>
+        </a-entity>
+
+        <!--Left Foot-->
+        <a-entity>
+            <a-sphere
+            position="-.5 -1 -2"
+            radius="0.45"
+            color="#69c4f5"
+            ></a-sphere>
+        </a-entity>
+
+        <!--Right Foot-->
+        <a-entity>
+            <a-sphere
+            position=".5 -1 -2"
+            radius="0.45"
+            color="#69c4f5"
+            ></a-sphere>
+        </a-entity>
+
+        <!--Left Leg-->
+        <a-entity>
+            <a-cylinder
+            position="-.5 .05 -2" 
+            radius=".3" 
+            height="1.1"
+            color="#5a9e60" 
+            ></a-cylinder>
+        </a-entity>
+
+        <!--Right Leg-->
+        <a-entity>
+            <a-cylinder
+            position=".5 .05 -2" 
+            radius=".3" 
+            height="1.1"
+            color="#5a9e60" 
+            ></a-cylinder>
+        </a-entity>
+
+        <!--Body-->
+        <a-entity>
+            <a-box
+            position="0 1.7 -2"
+            width="2.5"
+            height="2"
+            color="#69c4f5"
+            ></a-box>
+        </a-entity>
+
+        <!--Neck-->
+        <a-entity>
+            <a-box
+            position="0 2.8 -2"
+            width=".8"
+            height=".2"
+            color="#5a9e60"
+            ></a-box>
+        </a-entity>
+
+        <!--Head-->
+        <a-entity>
+            <a-box
+            position="0 3.6 -2"
+            width="1.35"
+            height="1.35"
+            color="#69c4f5"
+            ></a-box>
+        </a-entity>
+
+        <!--Left Arm-->
+        <a-entity>
+            <a-cylinder
+            position="-1.8 2 -2" 
+            radius=".3" 
+            height="1.4"
+            rotation="50 -60 0" 
+            color="#5a9e60"
+            ></a-cylinder>
+        </a-entity>
+
+        <!--Right Arm-->
+        <a-entity>
+            <a-cylinder
+            position="1.8 2 -2" 
+            radius=".3" 
+            height="1.4"
+            rotation="-50 -100 0" 
+            color="#5a9e60"
+            ></a-cylinder>
+        </a-entity>
+
+        <!--Left Hand-->
+        <a-entity>
+            <a-dodecahedron
+            position="-2.4 2.65 -1.4"
+            radius="0.4"
+            color="#69c4f5"
+            ></a-dodecahedron>
+        </a-entity>
+
+        <!--Right Hand-->
+        <a-entity>
+            <a-dodecahedron
+            position="2.5 2.7 -1.7"
+            radius="0.4"
+            color="#69c4f5"
+            ></a-dodecahedron>
+        </a-entity>
+
+        <!--Left Eye-->
+        <a-entity>
+            <a-sphere
+            position="-.25 3.7 -1.6"
+            radius=".2"
+            ></a-sphere>
+        </a-entity>
+
+        <!--Right Eye-->
+        <a-entity>
+            <a-sphere
+            position=".25 3.7 -1.6"
+            radius=".2"
+            ></a-sphere>
+        </a-entity>
+
+        <!--Left Pupil-->
+        <a-entity position="0 0 0" rotation="0 0 0">
+            <a-sphere
+            position="-.225 3.6 -1.4"
+            radius="0.05"
+            animation="property:position; from:-.225 3.6 -1.4; to:-.225 3.7 -1.4; dir:alternate; loop: true; dur: 1000"
+            color="black"
+            ></a-sphere>
+        </a-entity>
+
+        <!--Right Pupil-->
+        <a-entity position="0 0 0" rotation="0 0 0">
+            <a-sphere
+            position=".225 3.6 -1.4"
+            radius="0.05"
+            animation="property:position; from:.225 3.6 -1.4; to:.225 3.7 -1.4; dir:alternate; loop: true; dur: 1000"
+            color="black"
+            ></a-sphere>
+        </a-entity>
+
+        <!--Antenna-->
+        <a-entity position="0 0 0" rotation="0 0 0">
+            <a-cylinder
+            position="0 4.5 -2"
+            radius="0.05"
+            height=".6"
+            animation="property:position; from:-.25 4.5 -2; to:.25 4.5 -2; easing: linear; dir:alternate; loop: true; dur: 1000"
+            color="#f5c269"
+            ></a-cylinder>
+        </a-entity>
+
+        <!--Antenna Ball-->
+        <a-entity position="0 0 0" rotation="0 0 0">
+            <a-sphere
+            position="0 4.8 -2"
+            radius="0.15"
+            animation="property:position; from:-.25 4.8 -2; to:.25 4.8 -2; easing: linear; dir:alternate; loop: true; dur: 1000"
+            color="#f56975"
+            ></a-sphere>
+        </a-entity>
+
+        <!--Design-->
+        <a-entity>
+            <a-torus-knot
+            position="0 1.8 -1" 
+            arc="90" 
+            p="2" 
+            q="7" 
+            radius="0.4" 
+            radius-tubular="0.01"
+            color="#f569d5"
+            ></a-torus-knot>
+        </a-entity>
+
+        <!--Mouth-->
+        <a-entity>
+            <a-ring
+            position="0 3.25 -1"
+            radius-inner="0.05"
+            radius-outer="0.09"
+            color="#f56975"
+            ></a-ring>
+        </a-entity>
+
+    </a-scene>
+</body>
+
+</html>
